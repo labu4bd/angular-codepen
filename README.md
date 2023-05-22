@@ -1,6 +1,6 @@
-# MyApp
+# Angular-Codepen
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+Very nice codepen project with Angular. No coding or custom markup required! This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
 ## Development server
 
