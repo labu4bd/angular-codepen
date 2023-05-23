@@ -4,26 +4,34 @@
 
 Very nice codepen project with Angular. No coding or custom markup required! This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
+## Install Codemirror Dependencies
+
+`codemirror` is a peer dependency and must also be installed
+
+```sh
+npm install @ctrl/ngx-codemirror codemirror@5
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Inputs of Codemirror
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+All Inputs of [ngModel](https://angular.io/api/forms/NgModel#inputs) and
 
-## Build
+- `options` - options passed to the CodeMirror instance see http://codemirror.net/doc/manual.html#config
+- `name` - name applied to the created textarea
+- `autoFocus` - setting applied to the created textarea
+- `preserveScrollPosition` - preserve previous scroll position after updating value
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Outputs of Codemirror
 
-## Running unit tests
+All outputs of [ngModel](https://angular.io/api/forms/NgModel#outputs) and
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `codeMirrorLoaded` - called when codeMirror instance is initiated
+- `focusChange` - called when the editor is focused or loses focus
+- `scroll` - called when the editor is scrolled (not wrapped inside angular change detection must manually trigger change detection or run inside ngzone)
+- `cursorActivity` - called when the text cursor is moved
+- `drop` - called when file(s) are dropped
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
