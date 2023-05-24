@@ -1,0 +1,14 @@
+.body{
+    margin: 0;
+}
+app-editor{
+    display: contents;
+}
+.pane{
+    height: 50%;
+    display: flex;
+}
+
+.top-pane{
+    background-color: hsl(225, 6%, 25%);
+}

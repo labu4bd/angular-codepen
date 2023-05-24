@@ -1,0 +1,35 @@
+
+<div class="pane top-pane">
+  <app-editor 
+    (callParent)="getMsgFromEditor($event)"
+    languageName="xml" 
+    displayName="HTML"
+    value=" "
+  />
+  <app-editor 
+    (callParent)="getMsgFromEditor($event)"
+    languageName="css" 
+    displayName="CSS"
+    value=" "
+  />
+  <app-editor 
+    (callParent)="getMsgFromEditor($event)"
+    languageName="javascript" 
+    displayName="JS"
+    value=" "
+  />
+</div>
+<div class="pane">
+  <iframe 
+    srcdoc="{{srcDoc}}"
+    title="output" 
+    sandbox="allow-scripts"
+    [frameBorder]="0" 
+    width="75%" 
+    height="100%">
+    
+  </iframe>
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+
+<div class="editor-container">
+    <div class="editor-title">
+        {{displayName}}
+        <button>O/C</button>
+    </div>
+    <ngx-codemirror
+        onBeforeChange=""
+        value={value}
+        className="codemirror-wrapper"
+        [(ngModel)]="content"
+        (ngModelChange)="setEditorContent($event, languageName)"
+        [options]="{
+            lineNumbers: true,
+            lineWrapping: true,
+            lint: true,
+            theme: 'material',
+            mode: languageName
+        }"
+    ></ngx-codemirror>
+</div>
